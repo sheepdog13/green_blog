@@ -2,3 +2,16 @@
 .Home_main h1 {font-size: 3em;}
 .Home_main p {font-size: 20px;}
 
+.Home_Link {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-top: 20px;
+}
+.Home_Link a {
+    text-decoration: none;
+    color: black;
+    margin: 0px 10px;
+}
