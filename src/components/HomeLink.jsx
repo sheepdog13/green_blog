@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import {Link} from 'react-router-dom'
-import { userLogout } from '../database/currentUser';
+import { userLogout } from '../modules/currentUser';
 const HomeLink = () => {
     // 로그인 유무를 확인하기위한 변수
     const login = false;
@@ -16,7 +16,7 @@ const HomeLink = () => {
                  * 단 관리자페이지는 홈페이지주인만보이기 */
                 (<div>
                     <Link>포스트</Link>
-                    <Link>방명록</Link>
+                    <Link to='/guest'>방명록</Link>
                     <Link>관리자페이지</Link>
                     <Link>마이페이지</Link>
                     <Link onClick={()=>{dispatch(userLogout())}}>로그아웃</Link>
@@ -26,7 +26,7 @@ const HomeLink = () => {
                 (
                     <div>
                         <Link>포스트</Link>
-                        <Link to='/gest'>방명록</Link>
+                        <Link to='/guest'>방명록</Link>
                         <Link to='/loginform'>로그인</Link>
                     </div>
                 )

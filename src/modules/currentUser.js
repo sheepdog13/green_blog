@@ -25,7 +25,7 @@ function currentUser(state=initalState, action) {
             // 로그아웃을 했을때 그 값이 null값으로 들어감
             return null;
         default :
-            return state;    
+            return state; 
     }
 }
 
