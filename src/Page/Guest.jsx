@@ -13,7 +13,7 @@ const Guest = () => {
     // 이메일정보를 들고오기위해 리덕스의 currentUser들고오기
     const currentUser = useSelector((state)=>(state.currentUser))
 
-    const [name, setName] = useState('익명');
+    const [name, setName] = useState(currentUser ? currentUser.email : "익명");
     const [text, setText] = useState();
     return (  
         <div className="mx-5 mt-5">

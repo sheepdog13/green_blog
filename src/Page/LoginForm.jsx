@@ -102,43 +102,28 @@ const LoginForm = () => {
         console.log(errorCode,errorMessage)
       });
   }
-
   return (
-    <div>
-      <Container className="mt-5">
-        <Row>
-          <Col>
-            <Button variant="link" onClick={emailCreate} className='create_button'>아래의 정보로 회원가입</Button>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={1}></Col>
-          <Col xs={10} >
-            <Form onSubmit={onsubmit}>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>이메일</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" onChange={(e)=>{setEmail(e.target.value)}}/>
-                <Form.Text className="text-muted">
-                  We'll never share your email with anyone else.
-                </Form.Text>
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>비밀번호</Form.Label>
-                <Form.Control type="password" placeholder="Password" onChange={(e)=>{setPassword(e.target.value)}} />
-              </Form.Group>
-              <div className="my_center">
-              <Button variant="primary" type="submit" className="my_margin_auto">
-                  로그인
-              </Button>
-              <hr />
-              <p className="hint_text"> 소셜아이디로 로그인</p>
-              <Button variant="outline-danger" onClick={googleLogin}>구글로 로그인</Button>
-            </div>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
+    <div className="login_form_body">
+      <div className="center">
+        <h1>Login</h1>
+        <form onSubmit={onsubmit}>
+          <div className="txt_field">
+            <input type="text" required onChange={(e)=>{setEmail(e.target.value)}} />
+            <span ></span>
+            <label>Username</label>
+          </div>
+          <div className="txt_field">
+            <input type="password" required onChange={(e)=>{setPassword(e.target.value)}} />
+            <span ></span>
+            <label>Password</label>
+          </div>
+          <input type="submit" value="Login" />
+          <div className="google_link"><a href="#" onClick={()=>{googleLogin()}}>구글로 로그인</a></div>
+          <div className="signup_link">
+            Not a member? <a href="#">Signup</a>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

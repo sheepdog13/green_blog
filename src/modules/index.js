@@ -3,7 +3,9 @@
 import { combineReducers } from "redux";
 import currentUser from "../modules/currentUser";
 import guest from "../modules/guest";
+import board from "../modules/board";
 
-const rootReducer = combineReducers({currentUser,guest});
+
+const rootReducer = combineReducers({currentUser,guest, board});
 
 export default rootReducer;

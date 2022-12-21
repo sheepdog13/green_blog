@@ -6,6 +6,9 @@ import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginForm from './Page/LoginForm';
 import Guest from './Page/Guest';
+import Board from './Page/Board';
+import BoardPage from './Page/BoardPage';
+import BoardWirteForm from './Page/BoardWirteForm';
 
 // Routes와 Route를 이용하여 화면 관리
 function App() {
@@ -16,6 +19,9 @@ function App() {
         <Route path='/' element={<Home />}></Route>
         <Route path='/loginform' element={<LoginForm />}></Route>
         <Route path='/guest' element={<Guest />}></Route>
+        <Route path='/board' element={<Board />}></Route>
+        <Route path='/board/:id' element={<BoardPage />}></Route>
+        <Route path='/board/modifyform' element={<BoardWirteForm />}></Route>
       </Routes>
     </div>
   );
